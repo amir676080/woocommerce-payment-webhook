@@ -1,55 +1,28 @@
-# woocommerce-payment-webhook
-=== WooCommerce Payment Webhook ===
-Contributors: amir676080
-Donate link: https://amir676080.ir
-Tags: woocommerce, webhook, order processing, payment
-Requires at least: 5.0
-Tested up to: 6.6
-Requires PHP: 7.2
-Stable tag: 1.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+"This WooCommerce plugin allows you to trigger a webhook whenever an order status changes to 'processing.' It is designed for businesses and developers who need to send real-time order data to external services. The plugin integrates seamlessly with WooCommerce, allowing you to configure and manage webhooks directly from the WooCommerce settings page."
 
-== Description ==
 
-This plugin triggers a webhook when an order is marked as "processing" in WooCommerce. It is designed to help developers and store owners who need to integrate WooCommerce with external services.
+"این پلاگین WooCommerce به شما اجازه می‌دهد تا یک وب‌هوک را هنگامی که وضعیت سفارش به 'در حال انجام' (processing) تغییر می‌کند، فعال کنید. این پلاگین برای کسب‌وکارها و توسعه‌دهندگانی که نیاز دارند داده‌های سفارشات خود را به‌صورت آنی به سرویس‌های خارجی ارسال کنند، طراحی شده است. این پلاگین به‌سادگی با ووکامرس یکپارچه می‌شود و امکان پیکربندی و مدیریت وب‌هوک‌ها را از طریق بخش تنظیمات ووکامرس فراهم می‌کند."
 
-== Installation ==
+Install and Activate the Plugin:
 
-1. Upload the `woocommerce-payment-webhook` folder to the `/wp-content/plugins/` directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Configure your webhooks in the WooCommerce settings.
+Upload the woocommerce-payment-webhook folder to the /wp-content/plugins/ directory.
+Go to the WordPress admin area and activate the plugin through the 'Plugins' menu.
+Configure the Webhook:
 
-== Frequently Asked Questions ==
+Navigate to "WooCommerce > Settings > Advanced > Webhooks."
+Create a new webhook.
+In the "Topic" section, select order.updated.
+Enter the destination webhook URL and activate the webhook.
+From now on, whenever an order status changes to "processing," the order data will be sent to the specified URL.
 
-= How do I set up the webhook? =
+نصب و فعال‌سازی پلاگین:
 
-Go to WooCommerce > Settings > Advanced > Webhooks, and create a new webhook. Select the topic "Order updated" and provide the URL for your webhook endpoint.
+پوشه woocommerce-payment-webhook را در مسیر /wp-content/plugins/ آپلود کنید.
+به بخش مدیریت وردپرس بروید و پلاگین را از منوی 'افزونه‌ها' فعال کنید.
+تنظیم وب‌هوک:
 
-== Changelog ==
-
-= 1.0 =
-* Initial release.
-
-== Upgrade Notice ==
-
-= 1.0 =
-Initial release.
-
-== Screenshots ==
-
-== License ==
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+به بخش "ووکامرس > پیکربندی > پیشرفته > وب‌هوک" بروید.
+یک وب‌هوک جدید ایجاد کنید.
+در قسمت "موضوع" (Topic)، گزینه order.updated را انتخاب کنید.
+URL وب‌هوک مقصد را وارد کرده و وب‌هوک را فعال کنید.
+از این پس، هر زمان وضعیت یک سفارش به "در حال انجام" تغییر کند، اطلاعات سفارش به URL مشخص‌شده ارسال می‌شود.
